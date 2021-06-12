@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'Container_Loc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'marcosfaino$meublog', # no pythonanywhere é o nome do usuário + $ + nome do banco
-        'USER': 'marcosfaino',
-        'PASSWORD': 'SuaSenha', # colocar sua senha aqui.
-        'HOST': 'marcosfaino.mysql.pythonanywhere-services.com',   # Or an IP Address that your DB is hosted on
+        'NAME': 'container_loc', # no pythonanywhere é o nome do usuário + $ + nome do banco
+        'USER': 'root',
+        'PASSWORD': '1234', # colocar sua senha aqui.
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
