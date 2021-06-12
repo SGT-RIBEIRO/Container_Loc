@@ -1,0 +1,1 @@
+web:gunicorn Container_Loc.wsgi:core --log-file -
