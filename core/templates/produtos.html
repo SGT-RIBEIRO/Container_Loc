@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block produtos %} style="text-shadow: -1px 1px 1px  rgb(252, 50, 0);" {% endblock %}
+{% block content %}
+        <section class="prim_section">
+            <div class="container_section_prim center">
+
+                <h2>Serralheria <br>Produtos e Serviços</h2>
+
+
+                <!-- ---- SLIDE---- -->
+
+                <div id="containerSlide">
+                    <div id="boxImags">
+                        <img class="imgSlide selectImgSlide" id="idImgSlide1" src="../static/img/serralheria/produtosServicos/1.jpg" alt="">
+                        <img class="imgSlide" id="idImgSlide2" src="../static/img/serralheria/produtosServicos/2.jpg" alt="">
+                        <img class="imgSlide" id="idImgSlide3" src="../static/img/serralheria/produtosServicos/3.jpg" alt="">
+                        <img class="imgSlide" id="idImgSlide4" src="../static/img/serralheria/produtosServicos/4.jpg" alt="">
+                    </div>
+                </div>
+                <div id="boxBotoes">
+                <ul id="botoes">
+
+                </ul></div>
+
+                <!-- ---- SLIDE---- -->
+
+
+            </div><!-- ---- container_section_prim ---- -->
+        </section><!-- ---- prim_section ---- -->
+
+
+
+        <!-- ######## SECTION-SERRALHERIA ######## -->
+        <section id="serralheria">
+
+            <div id="imgSerra" style="background-image: url({% static 'img/serra-fundo.jpg' %});">
+                <div id="fund">
+                    <div id="container_section_containers" class="center">
+                        <div class="line-text">
+                            <div class="box_estilo">
+                                <div class="line" style="height: 2px;"></div>
+                                <h2>Loja virtual</h2>
+                            </div>
+                            <p id="msgSerralheria">Nossa empresa também atua no segmento de serralheria, fabricamos e reformamos portões, portas, janelas, grades em geral e outras estruturas em aço, metal e alumínio. Contamos com uma equipe de proficionais capacitados para melhor realização dos seus serviços.</p>
+                        </div><!-- ---- line-text ---- -->
+
+                        <div class="box-serralheria">
+                            <div class="serralheria-vitrine">
+                                {% for p in serralheria %}
+                                <div class="box-itens">
+                                    <h3>{{ p.nome }}</h3>
+                                    <div class="desc-item">
+                                        <img class="img-serra-itens" src="..{{ p.imagem.thumb.url }}" alt="">
+                                        <p>Apartir de <span>R$: {{ p.preco }}</span></p>
+                                        <div class="serra-orcamento">
+                                        	<span> Faça o seu orçamento</span>
+                                        	<a href="https://api.whatsapp.com/send?phone=5569984088834&text=ola%20quero%20adiquirir%0D{{ p.nome }}"><i class="fab fa-whatsapp iconlaranjas"></i></a>
+                                        	<a href="tel:69984088834"><i class="icone-address fas fa-phone-volume iconlaranjas"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- ######## SECTION-SERRALHERIA ######## -->
+{% endblock %}

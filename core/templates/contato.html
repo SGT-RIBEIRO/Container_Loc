@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block contato %} style="text-shadow: -1px 1px 1px  rgb(252, 50, 0);" {% endblock %}
+{% block content %}
+<div class="container">
+    {% bootstrap_css %}
+    <div class="container">
+    <h2 style="padding: 20px">Envie sua mensagem que retornaremos o mais breve possível!!!</h2>
+        {% bootstrap_messages %}
+        <form style="text-align: justify; padding: 30px" action="{% url 'contato' %}" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            {% endbuttons %}
+            <!--<input class="form-control" style="padding: 5px; color: chocolate" type="submit" value="Enviar">--!>
+        </form>
+    </div>
+    {% bootstrap_javascript jquery='full' %}
+</div>
+{% endblock %}

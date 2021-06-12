@@ -1,0 +1,45 @@
+{% load static %}
+
+        <!-- ######## SECTION-SERRALHERIA ######## -->
+        <section id="serralheria">
+
+            <div id="imgSerra" style="background-image: url({% static 'img/serra-fundo.jpg' %});">
+                <div id="fund">
+                    <div id="container_section_containers" class="center">
+                        <div class="line-text">
+                            <div class="box_estilo">
+                                <div class="line" style="height: 2px;"></div>
+                                <h2>Serralheria Containerloc</h2>
+                            </div>
+                            <p id="msgSerralheria">Nossa empresa também atua no segmento de serralheria, fabricamos e reformamos portões, portas, janelas, grades em geral e outras estruturas em aço, metal e alumínio. Contamos com uma equipe de proficionais capacitados para melhor realização dos seus serviços.</p>
+                        </div><!-- ---- line-text ---- -->
+
+                        <div class="box-serralheria">
+                            <div class="serralheria-vitrine">
+
+                                {% for s in serralheria %}
+
+                                <div class="box-itens">
+                                    <h3>{{ s.nome }}</h3>
+                                    <div class="desc-item">
+                                        <img class="img-serra-itens" src="media/{{ s.imagem }}" alt="">
+                                        <p>Apartir de <span>R$: {{ s.preco }}</span></p>
+
+                                        <div class="serra-orcamento">
+                                        	<span> Faça o seu orçamento</span>
+                                        	<a href="https://api.whatsapp.com/send?phone=5569984088834&text=ola%20quero%20adiquirir%0D{{ s.nome }}"><i class="fab fa-whatsapp iconlaranjas"></i></a>
+                                        	<a href="tel:69984088834"><i class="icone-address fas fa-phone-volume iconlaranjas"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% endfor %}
+
+                            </div>
+                            <a id="link-serralheria" href="{% url 'produtos' %}">Saiba mais </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- ######## SECTION-SERRALHERIA ######## -->

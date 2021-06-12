@@ -1,0 +1,36 @@
+{% load static %}
+
+        <section id="carousel_containers">
+
+            <div id="container_section_containers" class="center">
+                <div class="line-text">
+                    <div class="box_estilo">
+                        <div class="line" style="height: 2px;"></div>
+                        <h2>Conheça os nossos containeres</h2>
+                    </div>
+                </div><!-- ---- line-text ---- -->
+                <div class="box_carousel_img">
+                    <div class="items-wrapper">
+                        <div class="items">
+                            {% for i in imagens %}
+                            <div class="item"><img src="media/{{ i.imagem }}" alt=""></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="button_slide-nav">
+                        <button id="ant">
+                            <i class="passa far fa-hand-point-left"></i>
+                        </button>
+
+                        <button id="prox">
+                            <i class="passa far fa-hand-point-right"></i>
+                        </button>
+                    </div>
+                    <a id="link-container" href="{% url 'container' %}">Alugue seu container </a>
+                </div>
+
+
+            </div><!-- ---- container_section_containers ---- -->
+
+        </section><!-- ---- Section carousel_containers ---- -->
+
