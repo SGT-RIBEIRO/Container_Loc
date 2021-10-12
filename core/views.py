@@ -65,7 +65,7 @@ class ContatosViewPdf(View):
             'contatos': contatos,
             'count': contatos.count()
         }
-        if request.user != 'AnonymousUser':
+        if request.user.is_authenticated:
             pdf = render_to_pdf('contatospdf.html', data)
             return HttpResponse(pdf, content_type='application/pdf')
         else:
