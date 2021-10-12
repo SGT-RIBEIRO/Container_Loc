@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from .models import CarrosselContainer, ProdutosSerralheria, Contato
 from .forms import ContatoModelForm
 from .utils import render_to_pdf
+from django.shortcuts import redirect
 
 
 class IndexView(TemplateView):
@@ -54,16 +55,21 @@ class ProdutoViewPdf(View):
         pdf = render_to_pdf('produtospdf.html', data)
         return HttpResponse(pdf, content_type='application/pdf')
 
-class ContatosViewPdf(View):
+class AcessoNegado(TemplateView):
+    template_name = 'negado.html'
 
+class ContatosViewPdf(View):
     def get(self, request, *args, **kwargs):
         contatos = Contato.objects.all()
         data = {
             'contatos': contatos,
             'count': contatos.count()
         }
-        pdf = render_to_pdf('contatospdf.html', data)
-        return HttpResponse(pdf, content_type='application/pdf')
+        if request.user != 'AnonymousUser':
+            pdf = render_to_pdf('contatospdf.html', data)
+            return HttpResponse(pdf, content_type='application/pdf')
+        else:
+            return redirect('negado')
 
 
 class ContainerView(TemplateView):
