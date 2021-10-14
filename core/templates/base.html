@@ -15,14 +15,23 @@
     <link href = "https://fonts.googleapis.com/css2? family = Roboto: wght @ 300 & display = swap" rel = "stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous">
+
         /* --- ---- home-site ---- --- */
 
     </script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
     <main>
         <header class="cabeca" id="cp_cabeca">
             <div class="container_menu center">
+                <div class="toggleMobile">
+                    <span id="themeDark">
+                        <i id="iconSun" data-feather="sun"></i>
+                        <i id="iconMoon" data-feather="moon"></i></span>
+                    <input checked id="switch" type="checkbox" name="theme">
+                    <label class="labelDarkMode" for="switch">Toggle</label>
+                </div>
                 <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'img/loginho.png' %}" alt=""></a></div>
                 <nav class="nav_menu">
                     <ul class="box_menu">
@@ -160,6 +169,12 @@
 
         </footer><!-- ---- footer_rodape ---- -->
 
+        <script>
+            feather.replace()
+        </script>
+
+
+        <script src="{% static 'js/scriptDarkMode.js' %}"></script>
         <script src="{% static 'js/script.js' %}"></script>
         <script src="{% static 'js/scriptSlide.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
