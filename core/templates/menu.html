@@ -1,0 +1,45 @@
+{% load static %}
+<nav class="nav_menu">
+    <ul class="box_menu">
+        <li>
+            <a href="{% url 'index' %}">Home</a>
+            <!-- ---- marcando a pagina atual ---- -->
+        </li>
+        <li>
+            <a href="{% url 'produtos' %}">Serralheria</a>
+        </li>
+        <li>
+            <a href="{% url 'container' %}">Containers</a>
+        </li>
+        <li>
+            <a href="{% url 'sobre_nos' %}">Sobre</a>
+        </li>
+        <li>
+            <a href="{% url 'contato' %}">Contato</a>
+        </li>
+        {% if request.user.is_authenticated %}
+            <li>
+                <a class="LinkMenu" href="{% url 'negado' %}">Serviços</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+<!-- ---- --------------------------------------------------------- ---- -->
+<!-- ---- nav_mobile ---- -->
+<nav class="nav_mobile">
+    <h2><i class="fas fa-bars"></i></h2>
+    <ul class="menu_nav">
+        <li>
+            <a href="{% url 'index' %}">Home</a>
+        </li>
+        <li>
+            <a href="{% url 'produtos' %}">Produtos</a>
+        </li>
+        <li>
+            <a href="{% url 'sobre_nos' %}">Sobre</a>
+        </li>
+        <li>
+            <a href="{% url 'contato' %}">Contatos</a>
+        </li>
+    </ul>
+</nav><!-- ---- nav_mobile ---- -->

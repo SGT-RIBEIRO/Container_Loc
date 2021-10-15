@@ -1039,7 +1039,9 @@ ul#botoes li.selected{
     background-color: #ffffff;
 }
 
-
+.paginaAtual {
+    text-shadow: -1px 1px 1px  rgb(252, 50, 0);
+}/* troca de estilo do menu, implementado com ajax*/
 /*---------------------------------------------------------------*/
 
 

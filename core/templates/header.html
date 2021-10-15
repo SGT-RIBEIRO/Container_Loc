@@ -1,0 +1,17 @@
+{% load static %}
+<header class="cabeca" id="cp_cabeca">
+    <div class="container_menu center">
+        <div class="toggleMobile">
+                    <span id="themeDark">
+                        <i id="iconSun" data-feather="sun"></i>
+                        <i id="iconMoon" data-feather="moon"></i>
+                    </span>
+            <input checked id="switch" type="checkbox" name="theme">
+            <label class="labelDarkMode" for="switch">Toggle</label>
+        </div>
+        <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'img/loginho.png' %}" alt=""></a></div>
+        {% include 'menu.html' %}
+    </div><!-- ---- center ---- -->
+    <div class="clear"></div>
+    <hr class="linha">
+</header>
