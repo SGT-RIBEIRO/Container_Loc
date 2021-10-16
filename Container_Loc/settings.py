@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'container_loc', # no pythonanywhere é o nome do usuário + $ + nome do banco
         'USER': 'root',
-        'PASSWORD': 'ricardo',# colocar sua senha aqui.
+        'PASSWORD': '1234',# colocar sua senha aqui.
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }

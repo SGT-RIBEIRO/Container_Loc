@@ -1044,6 +1044,16 @@ ul#botoes li.selected{
 }/* troca de estilo do menu, implementado com ajax*/
 /*---------------------------------------------------------------*/
 
-
+.form-button {
+    padding: 10px;
+    align-items: center;
+}
+.externa-button-form {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 /* Style Pagina Administrativa */
 
