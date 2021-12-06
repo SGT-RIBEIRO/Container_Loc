@@ -1,0 +1,71 @@
+{% load static %}
+<footer class="rodape">
+    <div class="container_rodape center">
+        <div class="endereco w33">
+            <div class="box_endereco">
+                <h2><i class="icone-address fas fa-map-marker-alt iconlaranjas"></i></h2>
+                <h2>Endereço</h2>
+                <address class="end">
+                    <p>
+                        <strong>Rua:</strong> AV. Candeias, Nº: 4325.<br>
+                        <strong>Bairro:</strong> Jardim Monte Alegre.<br>
+                        <strong>Cidade:</strong> Ariquemes-RO. <br>
+                        <strong>Cep:</strong> 76.871.247. <br>
+                        <strong>Complemento:</strong> Localizado à 500 metros, da rotatoria da Av. Machadinho com a
+                        Av. Candeias.
+                    </p>
+                </address><!-- ---- address ---- -->
+            </div><!-- ---- box_endereco ---- -->
+        </div><!-- ---- endereco w33 ---- -->
+
+        <div class="localizacao w33">
+            <div class="box_localizacao">
+                <h2><i class="fas fa-walking iconlaranjas"></i></h2>
+                <h2>Venha nos fazer uma visita</h2>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d422.18876865957407!2d-63.048184985346495!3d-9.892867230682077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93cc970b52dbce61%3A0xae7c0529fa8b082f!2sContainer%20Loc!5e0!3m2!1spt-BR!2sbr!4v1610742963307!5m2!1spt-BR!2sbr"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div><!-- ----  ---- -->
+            </div><!-- ---- box_localizacao ---- -->
+        </div><!-- ---- localizacao w33 ---- -->
+
+        <div class="conect w33">
+            <div class="box_conect">
+                <h2><i class="icone-conect fas fa-wifi iconlaranjas"></i></h2>
+                <h2>Conecte-se conosco</h2>
+                <div class="box_icones">
+                    <a href="https://api.whatsapp.com/send/?phone=5569999950678&text&app_absent=0" target="_blank"
+                       rel="external">
+                        <div class="div_icone">
+                            <i class="icones_conect_whats fab fa-whatsapp icones iconwhats"></i>
+                        </div>
+                    </a><!-- ----  ---- -->
+                    <a href="https://www.facebook.com/profile.php?id=100032599958191" target="_blank"
+                       rel="external">
+                        <div class="div_icone">
+                            <i class="icones_conect_face fab fa-facebook icones"></i>
+                        </div>
+                    </a><!-- ----  ---- -->
+                    <a href="https://www.instagram.com/containerloclocacao/" target="_blank" rel="external">
+                        <div class="div_icone">
+                            <i class="icones_conect_insta fab fa-instagram icones"></i>
+                        </div>
+                    </a><!-- ----  ---- -->
+                    <a href="{% url 'contato' %}">
+                        <div class="div_icone">
+                            <i class="fas fa-envelope icones"></i></i>
+                        </div>
+                    </a><!-- ----  ---- -->
+                    <h2><i class="icone-address fas fa-phone-volume iconlaranjas"></i></h2>
+                    <h2>Telefones</h2>
+                    <p>(69) 99999-9999 *Claro |
+                        (69) 99999-9999 *Vivo
+                    </p>
+                </div><!-- ---- box_icones ---- -->
+            </div> <!-- ---- box_conect ---- -->
+        </div><!-- ---- conect w33 ---- -->
+    </div><!-- ---- cotainer_rodape ---- -->
+    <div class="clear"></div><!-- ---- limpando float ---- -->
+</footer><!-- ---- footer_rodape ---- -->

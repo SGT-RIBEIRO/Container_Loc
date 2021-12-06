@@ -46,6 +46,18 @@ class ProdutosSerralheria(Base):
     def __str__(self):
         return self.nome
 
+class Contato(models.Model):
+    nome = models.CharField('Nome', max_length=50)
+    email = models.EmailField('Email')
+    telefone = models.CharField('Telefone', max_length=14)
+    mensagem = models.TextField('Mensagem')
+
+    class Meta:
+        verbose_name = 'Contato'
+        verbose_name_plural = 'Contatos'
+
+    def __str__(self):
+        return self.nome
 
 
 

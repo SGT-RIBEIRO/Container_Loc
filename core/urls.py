@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import IndexView, SobreNosView, ContatoView, ProdutoView, ContainerView
+from .views import IndexView, SobreNosView, ContatoView, ProdutoView, ContainerView, ProdutoViewPdf, AcessoNegado, ContatosViewPdf
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -11,5 +11,8 @@ urlpatterns = [
     path('contato/', ContatoView.as_view(), name='contato'),
     path('produtos/', ProdutoView.as_view(), name='produtos'),
     path('container/', ContainerView.as_view(), name='container'),
+    path('produtospdf/', ProdutoViewPdf.as_view(), name='produtospdf'),
+    path('contatospdf/', ContatosViewPdf.as_view(), name='contatopdf'),
+    path('negado/', AcessoNegado.as_view(), name='negado'),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

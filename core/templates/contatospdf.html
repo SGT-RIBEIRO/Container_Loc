@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos feitos</title>
+</head>
+<body>
+    <h2>Lista de Contatos feitos</h2>
+    <h3>Quantidades: {{ count }}</h3>
+    <table border="1">
+        <thead>
+            <th style="padding: 2px">Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Mensagem</th>
+        </thead>
+        <tbody>
+            {% for contato in contatos %}
+                <tr>
+                    <td style="padding: 2px">{{ contato.nome }}</td>
+                    <td style="padding: 2px">{{ contato.email }}</td>
+                    <td style="padding: 2px">{{ contato.telefone }}</td>
+                    <td style="padding: 2px">{{ contato.mensagem }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

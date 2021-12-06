@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CarrosselContainer, ProdutosSerralheria,TipoProdutoLoc
+from .models import CarrosselContainer, ProdutosSerralheria,TipoProdutoLoc, Contato
 
 @admin.register(CarrosselContainer)
 class CarrosselAdmin(admin.ModelAdmin):
@@ -13,6 +13,11 @@ class ProdutosSerralheriaAdmin(admin.ModelAdmin):
 @admin.register(TipoProdutoLoc)
 class TipoProdutoAdmin(admin.ModelAdmin):
     list_display = ('tipo',)
+
+
+@admin.register(Contato)
+class ContatoAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'telefone', 'mensagem')
 
 
 
