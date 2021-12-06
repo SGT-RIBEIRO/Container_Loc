@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap4 %}
-{% block contato %} style="text-shadow: -1px 1px 1px  rgb(252, 50, 0);" {% endblock %}
 {% block content %}
 <div class="container">
     {% bootstrap_css %}
@@ -14,9 +13,10 @@
             {% buttons %}
                 <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
             {% endbuttons %}
-            <!--<input class="form-control" style="padding: 5px; color: chocolate" type="submit" value="Enviar">--!>
+            <!--<input class="form-control" style="padding: 5px; color: chocolate" type="submit" value="Enviar">-->
         </form>
     </div>
     {% bootstrap_javascript jquery='full' %}
 </div>
+    <!-- comit and push 21:28 -->
 {% endblock %}
