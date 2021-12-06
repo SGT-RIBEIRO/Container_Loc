@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap4 %}
-{% block containers %}  style="text-shadow: -1px 1px 1px  rgb(252, 50, 0);" {% endblock %}
 {% block content %}
 <div class="center">
         <div class="box-serralheria">
@@ -10,7 +9,7 @@
              <div class="box-itens">
                  <h3>{{ c.descricao }}</h3>
                  <div class="desc-item">
-                     <img class="img-serra-itens" src="../media/{{ c.imagem }}" alt="">
+                     <img class="img-serra-itens" src="../media/{{ c.imagem }}" alt="Fotos dos containers disponiveis pra locação e venda, Container Amoxarifado e Containers escritorios ">
                      <div class="serra-orcamento">
                          <span> Faça o seu orçamento</span>
                          <a href="https://api.whatsapp.com/send?phone=5569984088834&text=ola%20quero%20adiquirir%0D{{ c.descricao }}"><i class="fab fa-whatsapp iconlaranjas"></i></a>

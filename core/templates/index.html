@@ -1,19 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block home %} style="text-shadow: -1px 1px 1px  rgb(252, 50, 0);" {% endblock %}
 {% block content %}
-
-        <!-- ---- container_section_prim ---- -->
-            {% include 'prim_section.html' %}
-        <!-- ---- prim_section ---- -->
-
-        <!-- ---- container_section_containers ---- -->
-            {% include 'carousel_containers.html' %}
-        <!-- ---- Section carousel_containers ---- -->
-
-        <!-- ######## SECTION-SERRALHERIA ######## -->
-            {% include 'serralheria.html' %}
-        <!-- ######## SECTION-SERRALHERIA ######## -->
-
-
+    <!-- ---- container_section_prim ---- -->
+    {% include 'prim_section.html' %}
+    <!-- ---- prim_section ---- -->
+    <!-- ---- container_section_containers ---- -->
+    {% include 'carousel_containers.html' %}
+    <!-- ---- Section carousel_containers ---- -->
+    <!-- ######## SECTION-SERRALHERIA ######## -->
+    {% include 'serralheria.html' %}
+    <!-- ######## SECTION-SERRALHERIA ######## -->
 {% endblock %}

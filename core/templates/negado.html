@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+{% bootstrap_css %}
+{% buttons %}
+<th>
+    <h1 style="text-align: center">Relatórios</h1>
+</th>
+<div class="externa-button-form">
+    <div class="form-button">
+        <form method="get" action="{% url 'contatopdf' %}" target="_blank">
+            <button type="submit" class="btn btn-info">PDF Contatos</button>
+        </form>
+    </div>
+    <div class="form-button">
+        <form method="get" action="{% url 'produtospdf' %}" target="_blank">
+            <button type="submit" class="btn btn-info">PDF Produtos</button>
+        </form>
+    </div>
+</div>
+{% endbuttons %}
+{% endblock %}
