@@ -595,7 +595,7 @@ footer.rodape{
     position: relative;
     overflow: hidden;
     width: 100%;
-    background-color: rgba(103, 116, 116);
+    background-color: rgb(103, 116, 116);
     color: #CCC;
     padding-top: 10px;
 }
@@ -1049,6 +1049,7 @@ ul#botoes li.selected{
     align-items: center;
 }
 .externa-button-form {
+    height: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
